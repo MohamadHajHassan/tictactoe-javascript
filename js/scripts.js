@@ -60,7 +60,7 @@ window.onload = () => {
         scoreDisplayYellow.innerText = scoreYellow;
         scoreDisplayRed.innerText = scoreRed;
         winner.innerText = `Yellow win!`;
-        setInterval(() => (winner.innerText = ``), 1000);
+        setInterval(() => (winner.innerText = ``), 2000);
         endOfRound();
       } else if (
         (b1.innerHTML == b2.innerHTML &&
@@ -78,7 +78,7 @@ window.onload = () => {
         scoreDisplayYellow.innerText = scoreYellow;
         scoreDisplayRed.innerText = scoreRed;
         winner.innerText = `Red win!`;
-        setInterval(() => (winner.innerText = ``), 1000);
+        setInterval(() => (winner.innerText = ``), 2000);
         endOfRound();
       }
     }
@@ -109,7 +109,7 @@ window.onload = () => {
         scoreDisplayYellow.innerText = scoreYellow;
         scoreDisplayRed.innerText = scoreRed;
         winner.innerText = `Yellow win!`;
-        setInterval(() => (winner.innerText = ``), 1000);
+        setInterval(() => (winner.innerText = ``), 2000);
         endOfRound();
       } else if (
         (b1.innerHTML == b4.innerHTML &&
@@ -127,7 +127,7 @@ window.onload = () => {
         scoreDisplayYellow.innerText = scoreYellow;
         scoreDisplayRed.innerText = scoreRed;
         winner.innerText = `Red win!`;
-        setInterval(() => (winner.innerText = ``), 1000);
+        setInterval(() => (winner.innerText = ``), 2000);
         endOfRound();
       }
     }
@@ -152,7 +152,7 @@ window.onload = () => {
         scoreDisplayYellow.innerText = scoreYellow;
         scoreDisplayRed.innerText = scoreRed;
         winner.innerText = `Yellow win!`;
-        setInterval(() => (winner.innerText = ``), 1000);
+        setInterval(() => (winner.innerText = ``), 2000);
         endOfRound();
       } else if (
         (b1.innerHTML == b5.innerHTML &&
@@ -167,7 +167,7 @@ window.onload = () => {
         scoreDisplayYellow.innerText = scoreYellow;
         scoreDisplayRed.innerText = scoreRed;
         winner.innerText = `Red win!`;
-        setInterval(() => (winner.innerText = ``), 1000);
+        setInterval(() => (winner.innerText = ``), 2000);
         endOfRound();
       }
     }
@@ -193,7 +193,7 @@ window.onload = () => {
     });
     if (count == 9) {
       winner.innerHTML = "Draw!";
-      setInterval(() => (winner.innerText = ``), 1000);
+      setInterval(() => (winner.innerText = ``), 2000);
       endOfRound();
     }
   };
