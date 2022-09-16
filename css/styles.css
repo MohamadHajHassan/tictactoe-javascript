@@ -27,3 +27,17 @@ img {
   justify-content: center;
   align-items: center;
 }
+.results {
+  border: none;
+  left: 50%;
+  flex-direction: column;
+  font-size: 50px;
+}
+.results div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.results img {
+  padding-right: 20px;
+}

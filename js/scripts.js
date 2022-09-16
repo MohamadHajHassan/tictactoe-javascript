@@ -10,6 +10,8 @@ window.onload = () => {
   const b7 = document.getElementById("7");
   const b8 = document.getElementById("8");
   const b9 = document.getElementById("9");
+  const scoreDisplayYellow = document.getElementById("score-yellow");
+  const scoreDisplayRed = document.getElementById("score-red");
   let counter = 0;
   let scoreYellow = 0;
   let scoreRed = 0;
@@ -54,7 +56,8 @@ window.onload = () => {
       ) {
         // yellow win
         scoreYellow++;
-        console.log(scoreRed, scoreYellow);
+        scoreDisplayYellow.innerText = scoreYellow;
+        scoreDisplayRed.innerText = scoreRed;
         endOfRound();
       } else if (
         (b1.innerHTML == b2.innerHTML &&
@@ -69,7 +72,8 @@ window.onload = () => {
       ) {
         // red win
         scoreRed++;
-        console.log(scoreRed, scoreYellow);
+        scoreDisplayYellow.innerText = scoreYellow;
+        scoreDisplayRed.innerText = scoreRed;
         endOfRound();
       }
     }
@@ -97,7 +101,8 @@ window.onload = () => {
       ) {
         // yellow win
         scoreYellow++;
-        console.log(scoreRed, scoreYellow);
+        scoreDisplayYellow.innerText = scoreYellow;
+        scoreDisplayRed.innerText = scoreRed;
         endOfRound();
       } else if (
         (b1.innerHTML == b4.innerHTML &&
@@ -112,7 +117,8 @@ window.onload = () => {
       ) {
         // red win
         scoreRed++;
-        console.log(scoreRed, scoreYellow);
+        scoreDisplayYellow.innerText = scoreYellow;
+        scoreDisplayRed.innerText = scoreRed;
         endOfRound();
       }
     }
@@ -134,7 +140,8 @@ window.onload = () => {
       ) {
         // yellow win
         scoreYellow++;
-        console.log(scoreRed, scoreYellow);
+        scoreDisplayYellow.innerText = scoreYellow;
+        scoreDisplayRed.innerText = scoreRed;
         endOfRound();
       } else if (
         (b1.innerHTML == b5.innerHTML &&
@@ -146,7 +153,8 @@ window.onload = () => {
       ) {
         // red win
         scoreRed++;
-        console.log(scoreRed, scoreYellow);
+        scoreDisplayYellow.innerText = scoreYellow;
+        scoreDisplayRed.innerText = scoreRed;
         endOfRound();
       }
     }
