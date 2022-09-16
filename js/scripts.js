@@ -12,6 +12,7 @@ window.onload = () => {
   const b9 = document.getElementById("9");
   const scoreDisplayYellow = document.getElementById("score-yellow");
   const scoreDisplayRed = document.getElementById("score-red");
+  const winner = document.getElementById("winner");
   let counter = 0;
   let scoreYellow = 0;
   let scoreRed = 0;
@@ -58,6 +59,8 @@ window.onload = () => {
         scoreYellow++;
         scoreDisplayYellow.innerText = scoreYellow;
         scoreDisplayRed.innerText = scoreRed;
+        winner.innerText = `Yellow win!`;
+        setInterval(() => (winner.innerText = ``), 1000);
         endOfRound();
       } else if (
         (b1.innerHTML == b2.innerHTML &&
@@ -74,6 +77,8 @@ window.onload = () => {
         scoreRed++;
         scoreDisplayYellow.innerText = scoreYellow;
         scoreDisplayRed.innerText = scoreRed;
+        winner.innerText = `Red win!`;
+        setInterval(() => (winner.innerText = ``), 1000);
         endOfRound();
       }
     }
@@ -103,6 +108,8 @@ window.onload = () => {
         scoreYellow++;
         scoreDisplayYellow.innerText = scoreYellow;
         scoreDisplayRed.innerText = scoreRed;
+        winner.innerText = `Yellow win!`;
+        setInterval(() => (winner.innerText = ``), 1000);
         endOfRound();
       } else if (
         (b1.innerHTML == b4.innerHTML &&
@@ -119,6 +126,8 @@ window.onload = () => {
         scoreRed++;
         scoreDisplayYellow.innerText = scoreYellow;
         scoreDisplayRed.innerText = scoreRed;
+        winner.innerText = `Red win!`;
+        setInterval(() => (winner.innerText = ``), 1000);
         endOfRound();
       }
     }
@@ -142,6 +151,8 @@ window.onload = () => {
         scoreYellow++;
         scoreDisplayYellow.innerText = scoreYellow;
         scoreDisplayRed.innerText = scoreRed;
+        winner.innerText = `Yellow win!`;
+        setInterval(() => (winner.innerText = ``), 1000);
         endOfRound();
       } else if (
         (b1.innerHTML == b5.innerHTML &&
@@ -155,6 +166,8 @@ window.onload = () => {
         scoreRed++;
         scoreDisplayYellow.innerText = scoreYellow;
         scoreDisplayRed.innerText = scoreRed;
+        winner.innerText = `Red win!`;
+        setInterval(() => (winner.innerText = ``), 1000);
         endOfRound();
       }
     }
@@ -167,7 +180,28 @@ window.onload = () => {
   const endOfRound = () => {
     blocks.forEach(item => (item.innerHTML = ""));
   };
+  const ListenCheckDraw = item => {
+    item.addEventListener("click", checkDraw);
+  };
+
+  const checkDraw = () => {
+    let count = 0;
+    blocks.forEach(item => {
+      if (item.childElementCount == 1) {
+        count++;
+      }
+    });
+    if (count == 9) {
+      winner.innerHTML = "Draw!";
+      setInterval(() => (winner.innerText = ``), 1000);
+      endOfRound();
+    }
+  };
+
   //
+  scoreDisplayYellow.innerText = scoreYellow;
+  scoreDisplayRed.innerText = scoreRed;
   blocks.forEach(markBlock);
   blocks.forEach(ListenerCheckWin);
+  blocks.forEach(ListenCheckDraw);
 };
